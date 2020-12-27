@@ -89,7 +89,7 @@ pipeline {
 			cleanWs ()
 			}	
 		failure {
-			mail to: "$env.notificationRecipient",
+			mail to: "abraam31@gmail.com",
 				 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
 				 body: "Something is wrong with ${BUILD_URL}"
 			}
