@@ -89,12 +89,12 @@ pipeline {
 			cleanWs ()
 			}	
 		failure {
-			mail to: "env.notificationRecipient",
+			mail to: "$env.notificationRecipient",
 				 subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
 				 body: "Something is wrong with ${BUILD_URL}"
 			}
 		success {
-			mail to: "env.notificationRecipient",
+			mail to: "$env.notificationRecipient",
 				 subject: "Success Pipeline: ${currentBuild.fullDisplayName}",
 				 body: "Build success !! Deployment is successful!! Jenkins job ${BUILD_URL} "
 		}
