@@ -99,5 +99,4 @@ pipeline {
 				 body: "Build success !! Deployment is successful!! Jenkins job ${BUILD_URL} "
 		}
 	}
-}}
 }
